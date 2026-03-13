@@ -1,4 +1,4 @@
-import { landingContent } from "./content.js?v=20260313b";
+import { landingContent } from "./content.js?v=20260313c";
 
 const isPrototypeMode =
   window.location.protocol === "file:" ||
@@ -124,6 +124,7 @@ const renderHero = () => `
   <section class="hero section" id="top">
     <div class="shell hero__grid">
       <div class="hero__content">
+        <p class="hero__eyebrow">${escapeHtml(landingContent.hero.eyebrow)}</p>
         <h1>${escapeHtml(landingContent.hero.title)}</h1>
         <p class="hero__body">${escapeHtml(landingContent.hero.body)}</p>
         <div class="hero__actions">
@@ -139,41 +140,40 @@ const renderHero = () => `
             class="button button--secondary"
             href="${landingContent.hero.secondaryCta.href}"
             data-event="${landingContent.hero.secondaryCta.event}"
-            data-intent="${landingContent.hero.secondaryCta.intent}"
           >
             ${escapeHtml(landingContent.hero.secondaryCta.label)}
           </a>
-          <a
-            class="hero__text-link"
-            href="${landingContent.hero.tertiaryCta.href}"
-            data-event="${landingContent.hero.tertiaryCta.event}"
-          >
-            ${escapeHtml(landingContent.hero.tertiaryCta.label)}
-          </a>
         </div>
-        <ul class="hero__highlights" aria-label="Builder-first value points">
-          ${landingContent.hero.highlights
+        <ul class="hero__proof-strip" aria-label="Builder-first proof points">
+          ${landingContent.hero.proofItems
+            .map((item) => `<li class="hero__proof-pill">${escapeHtml(item)}</li>`)
+            .join("")}
+        </ul>
+        <ul class="hero__bullet-list" aria-label="Builder-first package benefits">
+          ${landingContent.hero.bullets
             .map((item) => `<li>${escapeHtml(item)}</li>`)
             .join("")}
         </ul>
       </div>
       <aside class="hero__panel" aria-label="${escapeHtml(
-        landingContent.hero.helperCard.title,
+        landingContent.hero.reviewCard.title,
       )}">
-        <h2>${escapeHtml(landingContent.hero.helperCard.title)}</h2>
-        <ol class="hero__checklist">
-          ${landingContent.hero.helperCard.items
+        <h2>${escapeHtml(landingContent.hero.reviewCard.title)}</h2>
+        <p class="hero__panel-intro">${escapeHtml(landingContent.hero.reviewCard.intro)}</p>
+        <ul class="hero__review-list">
+          ${landingContent.hero.reviewCard.items
             .map((item) => `<li>${escapeHtml(item)}</li>`)
             .join("")}
-        </ol>
-        <div class="hero__panel-meta">
-          <div>
-            <p>Request a project review based on current plans or drawings.</p>
-          </div>
-          <div>
-            <p>ADUs, custom homes, additions, and compact residential formats.</p>
-          </div>
-        </div>
+        </ul>
+        <p class="hero__panel-note">${escapeHtml(landingContent.hero.reviewCard.note)}</p>
+        <a
+          class="button button--primary hero__panel-cta"
+          href="${landingContent.hero.reviewCard.cta.href}"
+          data-event="${landingContent.hero.reviewCard.cta.event}"
+          data-intent="${landingContent.hero.reviewCard.cta.intent}"
+        >
+          ${escapeHtml(landingContent.hero.reviewCard.cta.label)}
+        </a>
       </aside>
     </div>
   </section>
