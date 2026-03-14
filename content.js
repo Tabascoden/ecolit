@@ -345,17 +345,6 @@ export const landingContent = {
       },
     ],
   },
-  proof: {
-    title: "Built around real project delivery",
-    body:
-      "Ecolit is developing a builder-facing system for projects that require structural discipline, execution clarity, and a more controlled shell stage.",
-    items: [
-      "Engineering coordination",
-      "Package-based delivery logic",
-      "Assembly guidance",
-      "Adaptation to project scope and execution model",
-    ],
-  },
   objections: {
     title: "Common builder concerns - addressed early",
     items: [
@@ -465,7 +454,7 @@ export const landingContent = {
   form: {
     title: "Submit your project for review",
     description:
-      "Share enough detail for a fit review. If file uploads are not yet wired into your deployment, include a Drive, Dropbox, or WeTransfer link below.",
+      "Share enough detail for a fit review",
     submitLabel: "Request project review",
     projectTypes: [
       "ADU",

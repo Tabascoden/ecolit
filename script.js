@@ -370,22 +370,6 @@ const renderPackages = () => `
   </section>
 `;
 
-const renderProof = () => `
-  <section class="section">
-    <div class="shell proof-grid">
-      <div class="section-heading">
-        <h2>${escapeHtml(landingContent.proof.title)}</h2>
-        <p>${escapeHtml(landingContent.proof.body)}</p>
-      </div>
-      <div class="proof-card">
-        ${landingContent.proof.items
-          .map((item) => `<p>${escapeHtml(item)}</p>`)
-          .join("")}
-      </div>
-    </div>
-  </section>
-`;
-
 const renderFaq = () => `
   <section class="section section--contrast" id="faq">
     <div class="shell">
@@ -578,7 +562,6 @@ const renderMain = () => {
       line: landingContent.useCases.line,
     }),
     renderPackages(),
-    renderProof(),
     renderCardSection({
       title: landingContent.objections.title,
       items: landingContent.objections.items,
