@@ -154,7 +154,6 @@ textarea:focus-visible {
 .hero__body,
 .section-note,
 .section-trust,
-.proof-card p,
 .cta-band p,
 .footer__brand p {
   color: var(--text-muted);
@@ -315,7 +314,6 @@ textarea:focus-visible {
 
 .hero__grid,
 .form-layout,
-.proof-grid,
 .scope-grid,
 .statement-grid,
 .cta-band {
@@ -431,7 +429,6 @@ textarea:focus-visible {
 .card,
 .package-card,
 .scope-card,
-.proof-card,
 .contact-card,
 .lead-form,
 .statement-card,
@@ -455,8 +452,7 @@ textarea:focus-visible {
 }
 
 .hero__panel h2,
-.contact-card a,
-.proof-card p:first-child {
+.contact-card a {
   color: var(--text-inverse);
 }
 
@@ -538,7 +534,6 @@ textarea:focus-visible {
 .package-card,
 .scope-card,
 .statement-card,
-.proof-card,
 .lead-form {
   padding: 1.5rem;
 }
@@ -573,7 +568,6 @@ textarea:focus-visible {
 
 .statement-grid,
 .scope-grid,
-.proof-grid,
 .form-layout,
 .cta-band {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -678,13 +672,6 @@ textarea:focus-visible {
   min-height: 4.6rem;
 }
 
-.proof-card {
-  background:
-    linear-gradient(160deg, rgba(16, 33, 26, 0.98), rgba(28, 72, 45, 0.95));
-  display: grid;
-  gap: 1rem;
-}
-
 .contact-card {
   max-width: 360px;
   background: rgba(16, 33, 26, 0.94);
@@ -719,6 +706,7 @@ textarea:focus-visible {
 
 .lead-form {
   background: rgba(255, 255, 255, 0.98);
+  color: var(--text);
 }
 
 .form-grid {
@@ -737,10 +725,15 @@ textarea:focus-visible {
   grid-column: 1 / -1;
 }
 
-.field span,
-.checkbox-field span {
+.field > span,
+.checkbox-field > span {
   font-size: 0.96rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: var(--bg-strong);
+}
+
+.field > span [aria-hidden="true"] {
+  color: var(--accent-dark);
 }
 
 .field input,
@@ -898,7 +891,6 @@ textarea:focus-visible {
   .hero__grid,
   .statement-grid,
   .scope-grid,
-  .proof-grid,
   .form-layout,
   .cta-band,
   .footer__grid,
@@ -973,8 +965,7 @@ textarea:focus-visible {
   .package-card,
   .scope-card,
   .lead-form,
-  .statement-card,
-  .proof-card {
+  .statement-card {
     border-radius: 24px;
   }
 
