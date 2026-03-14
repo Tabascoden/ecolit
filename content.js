@@ -29,42 +29,53 @@ export const landingContent = {
     { label: "Contact", href: "#send-plans" },
   ],
   hero: {
+    eyebrow: "FOR BUILDERS",
     title:
-      "Permit-ready structural + warm shell packages for residential and ADU builders",
+      "Permit-ready shell packages for ADU and residential builders",
     body:
-      "Close the shell faster with an engineered steel-frame and warm-envelope system designed to reduce framing labor risk, improve predictability, and help your team move from plans to build-ready delivery with fewer site surprises.",
+      "Engineered steel-frame and enclosure packages that help builders reduce framing variability, define scope earlier, and move projects toward dry-in with fewer site surprises.",
     primaryCta: {
-      label: "Send us your plans",
+      label: "Send Plans",
       href: "#send-plans",
       event: "hero_send_plans_click",
       intent: "project-review",
     },
     secondaryCta: {
-      label: "Get a preliminary shell budget",
-      href: "#send-plans",
-      event: "hero_shell_budget_click",
-      intent: "shell-budget",
-    },
-    tertiaryCta: {
-      label: "See what's included",
+      label: "See What's Included",
       href: "#whats-included",
       event: "hero_whats_included_click",
     },
-    helperCard: {
-      title: "Start with a project review",
-      items: [
-        "Send plans",
-        "Get scope assumptions",
-        "Receive budget direction",
-        "Decide next steps",
-      ],
-    },
-    highlights: [
-      "LGSF frame and warm-shell logic",
-      "Riveted assembly to reduce field variability",
-      "Warm-envelope coordination",
-      "Clear package scope before production",
+    proofItems: [
+      "Builder-first workflow",
+      "Defined scope before production",
+      "Engineering-led review",
+      "ADUs • Custom Homes • Additions",
     ],
+    bullets: [
+      "Engineered light-gauge steel frame",
+      "Coordinated shell scope before manufacturing",
+      "Reduced field variability during assembly",
+      "Clear assumptions and exclusions up front",
+    ],
+    reviewCard: {
+      title: "Start with a project review",
+      intro:
+        "Send your current plans or drawings and get a practical first-pass review of fit, scope, and next steps.",
+      items: [
+        "Project fit check",
+        "Preliminary shell scope",
+        "Budget direction",
+        "Assumptions and exclusions",
+      ],
+      note:
+        "Best fit for ADUs, custom homes, additions, and compact residential projects.",
+      cta: {
+        label: "Send Plans for Review",
+        href: "#send-plans",
+        event: "section_cta_click",
+        intent: "project-review",
+      },
+    },
   },
   trustStrip: {
     title: "Built for builders who need speed, clarity, and control",
